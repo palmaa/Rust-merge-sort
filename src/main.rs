@@ -24,6 +24,11 @@ fn generate_random_list(size : i32, min_value: i32, max_value: i32) -> Vec<i32> 
 
 }
 
+/*
+ / Recives an unsorted vector and returns a new sorted vecto
+ / @input param: vector -> vector to be sorted
+ / @output param: _ -> sorted vector
+ */
 fn sort_vector(vector : &Vec<i32>) -> Vec<i32> {
     return merge_sort(&vector)
 }
@@ -102,7 +107,6 @@ fn median_value(vector : &Vec<i32>) -> i32 {
  / input @param: vector  -> vector reference
  / output @param: (i32, i32) -> (number, ocurrences)
  */
-
 fn mode_value(vector : Vec<i32>) -> (i32, i32) {
     let mut map : HashMap<i32, i32> = HashMap::new();
     let size = vector.len();
@@ -140,6 +144,11 @@ fn mode_value(vector : Vec<i32>) -> (i32, i32) {
 
 }
 
+/*
+ / Checks if the vector is actually sorted or not.
+ / @input param: vector -> reference to the vector that has to be checked
+ / @output param: bool -> true (sorted) or false (not sorted)
+ */
 fn check_sorted(vector : &Vec<i32>) -> bool {
     let mut index = 1;
 
